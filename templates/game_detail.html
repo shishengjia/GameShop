@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}{% endblock %}
+
+{% block custom_css %}
+    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/my.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block custom_content %}
+
+    <div class="text-center">
+      <dl style="background-color: rgba(140,140,140,0.09);">
+        <dt style="font-size: 50px;font-style: italic;padding-top: 50px">{{ game.name }}</dt>
+      </dl>
+    </div>
+    <div style="width:900px; margin-left:auto; margin-right:auto;margin-top: 50px">
+    <div id="myCarousel" class="carousel slide">
+
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <iframe style="width: 100%;height: 100%" src="{{ game.video_code }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="item">
+            <img src="{{ MEDIA_URL }}{{ game.image_1 }}" style="width: 100%" alt="Second slide">
+        </div>
+        <div class="item">
+            <img src="{{ MEDIA_URL }}{{ game.image_2 }}" style="width: 100%" alt="Third slide">
+        </div>
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td style="font-weight: bolder">System Requirements</td>
+        </tr>
+        <tr>
+          <td style="font-size: 20px">os</td>
+          <td style="font-size: 20px">{{ game.os }}</td>
+        </tr>
+      <tr>
+          <td style="font-size: 20px">ram</td>
+          <td style="font-size: 20px">{{ game.ram }}</td>
+        </tr>
+      <tr>
+          <td style="font-size: 20px">hard_disk</td>
+          <td style="font-size: 20px">{{ game.hard_disk }}</td>
+        </tr>
+      <tr>
+          <td style="font-size: 20px">cpu</td>
+          <td style="font-size: 20px">{{ game.cpu }}</td>
+        </tr>
+      </tbody>
+    </table>
+        <button id="collection" type="button" class="btn-warning btn" style="width: 155px;height: 100px;font-size: x-large">{% if has_fav_game %}Collected{% else%}No Collected{% endif %}</button>
+        {% if has_buy %}
+            <button type="button" class="btn-success btn" style="width: 155px;height: 100px;font-size: x-large">Download</button>
+        {% else %}
+            <a href="{% url 'user:pay2' game.id%}"><button type="button" class="btn-primary btn" style="width: 155px;height: 100px;font-size: x-large">Buy</button></a>
+        {% endif %}
+
+    </div>
+
+
+{% endblock %}
+
+{% block custom_js %}
+    <script type="text/javascript">
+        function add_fav(current_elem, fav_id){
+    $.ajax({
+        cache: false,
+        type: "POST",
+        url:"{% url 'game:add_fav' %}",
+        data:{'fav_id':fav_id},
+        async: true,
+        beforeSend:function(xhr, settings){
+            xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+        },
+        success: function(data) {
+            if(data.status == 'fail'){
+                if(data.msg == 'not login'){
+                    window.location.href="/login/"
+                }else{
+                    current_elem.text("No Collected");
+                }
+            }else if(data.status == 'success'){
+                current_elem.text("Collected");
+            }
+        },
+     });
+    }
+
+    $('#collection').on('click', function(){
+        add_fav($(this), {{ game.id }});
+    });
+    </script>
+{% endblock %}

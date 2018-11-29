@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}{% endblock %}
+
+{% block custom_css %}
+    <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block custom_content %}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="{% url 'user:user_info' request.user.id%}">MyInfo</a></li>
+            <li><a href="{% url 'user:user_fav' request.user.id%}">MyFav</a></li>
+            <li class="active"><a href="{% url 'users:order'%}">MyOrder</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">MyOrder</h1>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th>OrderNo</th>
+                  <th>Product</th>
+                  <th>Amount</th>
+                  <th>Pay Time</th>
+                  <th>Pay Status</th>
+                </tr>
+              {% for order in orders %}
+                  <tr>
+                      <td style="vertical-align: middle !important;text-align: center;">{{order.out_trade_no}}</td>
+                      <td><img style="width: 120px;height: 80px" src="{{ MEDIA_URL }}{{ order.game.cover }}">&nbsp;&nbsp;<a href="{% url 'game:detail' order.game_id%}">{{order.game.name}}</a></td>
+                      <td style="vertical-align: middle !important;text-align: center;">{{order.order_amount}}</td>
+                      <td style="vertical-align: middle !important;text-align: center;">{{order.pay_time}}</td>
+                      {% ifequal order.pay_status "wait_for_pay" %}
+                          <td style="vertical-align: middle !important;text-align: center;"><a style="color: sandybrown;font-weight: bolder" href="{% url 'user:pay2' order.game.id%}">Wait Paying</a></td>
+                      {% else %}
+                            <td style="color: green;font-weight: bolder;vertical-align: middle !important;text-align: center;">Payed</td>
+                      {% endifequal %}
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          </div>
+
+{#          <h2 class="sub-header">Section title</h2>#}
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block custom_js %}
+
+{% endblock %}

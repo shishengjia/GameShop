@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="root@178.128.2.120:22">
+    <serverData>
+      <paths name="GameShop">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/GameShop" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="root@178.128.2.120:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/GameShop" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
