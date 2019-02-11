@@ -32,7 +32,7 @@
               {% for order in orders %}
                   <tr>
                       <td style="vertical-align: middle !important;text-align: center;">{{order.out_trade_no}}</td>
-                      <td><img style="width: 120px;height: 80px" src="{{ MEDIA_URL }}{{ order.game.cover }}">&nbsp;&nbsp;<a href="{% url 'game:detail' order.game_id%}">{{order.game.name}}</a></td>
+                      <td><img style="width: 120px;height: 80px" src="{{ order.game.cover_url }}">&nbsp;&nbsp;<a href="{% url 'game:detail' order.game_id%}">{{order.game.name}}</a></td>
                       <td style="vertical-align: middle !important;text-align: center;">{{order.order_amount}}</td>
                       <td style="vertical-align: middle !important;text-align: center;">{{order.pay_time}}</td>
                       {% ifequal order.pay_status "wait_for_pay" %}

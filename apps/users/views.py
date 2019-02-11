@@ -17,7 +17,7 @@ import requests
 
 from .models import UserProfile, EmailVerifyCode
 from operation.models import UserGame, UserFavorite, Order
-from game.models import Game
+from game.models import Game2
 from utils.LoginJudge import LoginRequiredMixin
 from utils.Alipay import AliPay
 from .forms import LoginForm, RegisterForm
@@ -88,7 +88,7 @@ class UserFavView(View, LoginRequiredMixin):
         game_list = []
         for collect in user_collect:
             fav_game_id = collect.fav_game_id
-            game = Game.objects.get(id=fav_game_id)
+            game = Game2.objects.get(id=fav_game_id)
             game_list.append(game)
 
         return render(request, 'usercenter_fav.html', {
@@ -194,7 +194,7 @@ class PayView2(View, LoginRequiredMixin):
     def get(self, request, game_id):
         if request.user.id is None:
             return render(request, "login.html")
-        game = Game.objects.get(id=game_id)
+        game = Game2.objects.get(id=game_id)
         pay = AliPay(
             appid="2016092100558978",
             app_notify_url="http://178.128.2.120:8001/userpay_return/",

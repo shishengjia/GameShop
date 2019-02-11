@@ -5,10 +5,10 @@ from django.db import models
 
 
 class GameCompany(models.Model):
-    desc = models.TextField(verbose_name="description")
+    # desc = models.TextField(verbose_name="description")
     name = models.CharField(max_length=50, verbose_name="name")
-    game_nums = models.IntegerField(default=0, verbose_name="game_num")
-    image = models.ImageField(upload_to="company/%Y/%m", verbose_name="logo")
+    # game_nums = models.IntegerField(default=0, verbose_name="game_num")
+    # image = models.ImageField(upload_to="company/%Y/%m", verbose_name="logo")
     add_time = models.DateTimeField(default=datetime.now)
 
     class Meta:

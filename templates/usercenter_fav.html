@@ -28,7 +28,7 @@
                 </tr>
               {% for game in game_list %}
                   <tr>
-                      <td><img style="width: 120px;height: 80px" src="{{ MEDIA_URL }}{{ game.cover }}">&nbsp;&nbsp;<a href="{% url 'game:detail' game.id%}">{{game.name}}</a></td>
+                      <td><img style="width: 120px;height: 80px" src="{{ game.cover_url }}">&nbsp;&nbsp;<a href="{% url 'game:detail' game.id%}">{{game.name}}</a></td>
                       <td style="vertical-align: middle !important;text-align: center;"><span style="font-weight: bolder;font-size: large;color: green">{{game.price}}</span></td>
                 </tr>
               {% endfor %}

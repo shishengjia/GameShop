@@ -19,13 +19,12 @@
 
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <iframe style="width: 100%;height: 100%" src="{{ game.video_code }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <img src="{{ game.game_scree_shot_1 }}" style="width: 100%" alt="Second slide">        </div>
+        <div class="item">
+            <img src="{{ game.game_scree_shot_2 }}" style="width: 100%" alt="Second slide">
         </div>
         <div class="item">
-            <img src="{{ MEDIA_URL }}{{ game.image_1 }}" style="width: 100%" alt="Second slide">
-        </div>
-        <div class="item">
-            <img src="{{ MEDIA_URL }}{{ game.image_2 }}" style="width: 100%" alt="Third slide">
+            <img src="{{ game.game_scree_shot_3 }}" style="width: 100%" alt="Third slide">
         </div>
     </div>
     <!-- 轮播（Carousel）导航 -->
@@ -40,25 +39,25 @@
     </div>
     <table class="table table-striped">
       <tbody>
-        <tr>
-          <td style="font-weight: bolder">System Requirements</td>
-        </tr>
+
         <tr>
           <td style="font-size: 20px">os</td>
           <td style="font-size: 20px">{{ game.os }}</td>
         </tr>
       <tr>
-          <td style="font-size: 20px">ram</td>
-          <td style="font-size: 20px">{{ game.ram }}</td>
+          <td style="font-size: 20px">Desc</td>
+          <td style="font-size: medium">{{ game.desc }}</td>
         </tr>
+        {% if comments %}
       <tr>
-          <td style="font-size: 20px">hard_disk</td>
-          <td style="font-size: 20px">{{ game.hard_disk }}</td>
+          <td style="font-size: 20px">Comments</td>
+          <td style="font-size: 20px">
+              {% for comment in comments %}
+                  <span style="font-size: medium"><p style="font-weight: bold">{{ forloop.counter }}:</p> {{ comment }}</span><br><br>
+              {% endfor %}
+          </td>
         </tr>
-      <tr>
-          <td style="font-size: 20px">cpu</td>
-          <td style="font-size: 20px">{{ game.cpu }}</td>
-        </tr>
+      {% endif %}
       </tbody>
     </table>
         <button id="collection" type="button" class="btn-warning btn" style="width: 155px;height: 100px;font-size: x-large">{% if has_fav_game %}Collected{% else%}No Collected{% endif %}</button>

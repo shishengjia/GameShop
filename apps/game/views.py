@@ -6,39 +6,32 @@ from django.db.models import Q
 
 from pure_pagination import Paginator, PageNotAnInteger
 
-from .models import Game, GameType
 from company.models import GameCompany
 from operation.models import UserFavorite, UserGame
 from utils.LoginJudge import LoginRequiredMixin
 import time
+import json
 from random import randint
 from operation.models import Order
+from game.models import GameTag, Game2, Comment
+from utils.steam import import_data, remove_duplicate
 
 
 class GameListView(View):
     def get(self, request):
-        # a = randint(2,20)
-        # # time.sleep(20)
-        # print(a)
-
-        all_game = Game.objects.all().order_by("-add_time")
-        all_type = GameType.objects.all()
-        all_company = GameCompany.objects.all()
-        all_year = sorted({year.release_time.year for year in all_game})
+        # import_data()
+        all_game = Game2.objects.all().order_by("tag_id")
+        all_tags = GameTag.objects.all()
+        all_year = [year for year in range(2000, 2020)]
 
         key_word = request.GET.get("key_word", "")
         if key_word:
             all_game = all_game.filter(name__icontains=key_word)
 
-        type_id = request.GET.get("type", "")
-        if type_id:
-            type_id = int(type_id)
-            all_game = all_game.filter(type_id=type_id)
-
-        company_id = request.GET.get("company_id", "")
-        if company_id:
-            company_id = int(company_id)
-            all_game = all_game.filter(company_id=company_id)
+        tag_id = request.GET.get("tag", "")
+        if tag_id:
+            tag_id = int(tag_id)
+            all_game = all_game.filter(tag_id=tag_id)
 
         year_ = request.GET.get("year", "")
         if year_:
@@ -49,10 +42,10 @@ class GameListView(View):
         if sort:
             if sort == "price":
                 all_game = all_game.order_by("price")
-            elif sort == "price_desc":
-                all_game = all_game.order_by("-price")
+                all_game = remove_duplicate(all_game)
             else:
-                all_game = all_game.order_by("-buy_nums")
+                all_game = all_game.order_by("-price")
+                all_game = remove_duplicate(all_game)
 
 
         # 分页
@@ -60,15 +53,13 @@ class GameListView(View):
             page = request.GET.get('page', 1)
         except PageNotAnInteger:
             page = 1
-        p = Paginator(all_game, per_page=7, request=request)
+        p = Paginator(all_game, per_page=15, request=request)
         games = p.page(page)
 
         return render(request, "index.html", {
-            "all_type": all_type,
+            "all_tags": all_tags,
             "games": games,
-            "all_company": all_company,
-            "type_id": type_id,
-            "company_id": company_id,
+            "tag_id": tag_id,
             "year_": year_,
             "all_year": all_year,
             "sort": sort,
@@ -78,7 +69,7 @@ class GameListView(View):
 
 class GameDetailView(View):
     def get(self, request, game_id):
-        game = Game.objects.get(id=game_id)
+        game = Game2.objects.get(id=game_id)
 
         has_buy = False
         has_fav_game = False
@@ -92,11 +83,17 @@ class GameDetailView(View):
             except:
                 has_buy = False
 
+        comment_objects = Comment.objects.filter(game_id=game_id)
+        comments = [item.comment for item in comment_objects]
+        if len(comments) >= 3:
+            comments = comments[:3]
+
         return render(request, "game_detail.html",{
             "game": game,
             "has_fav_game": has_fav_game,
-            "has_buy":has_buy,
-            "current_page": "game_list"
+            "has_buy": has_buy,
+            "current_page": "game_list",
+            "comments": comments
         })
 
 
@@ -110,11 +107,6 @@ class AddFavoriteView(View, LoginRequiredMixin):
         exit_records = UserFavorite.objects.filter(user=request.user, fav_game_id=int(fav_id))
         if exit_records:
             exit_records.delete()
-            game = Game.objects.get(id=int(fav_id))
-            game.fav_nums -= 1
-            if game.fav_nums < 0:
-                game.fav_nums = 0
-            game.save()
 
             return HttpResponse('{"status": "fail","msg": "cancel collect"}',
                                 content_type="application/json")
@@ -124,12 +116,6 @@ class AddFavoriteView(View, LoginRequiredMixin):
                 user_fav.user = request.user
                 user_fav.fav_game_id = int(fav_id)
                 user_fav.save()
-
-                game = Game.objects.get(id=int(fav_id))
-                game.fav_nums += 1
-                if game.fav_nums < 0:
-                    game.fav_nums = 0
-                game.save()
 
                 return HttpResponse('{"status": "success","msg": "already collect"}',
                                     content_type="application/json")

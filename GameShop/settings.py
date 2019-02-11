@@ -88,10 +88,13 @@ WSGI_APPLICATION = 'GameShop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "GameShop2",
+        'NAME': "GameShop",
         'USER': "root",
         'PASSWORD': "ssjusher123",
-        'HOST': "127.0.0.1"
+        'HOST': "127.0.0.1",
+        'OPTIONS': {
+                'charset': 'utf8mb4',
+            }
     }
 }
 
@@ -126,7 +129,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 STATIC_URL = '/static/'
@@ -141,6 +144,17 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 #支付宝相关配置
 private_key_path = os.path.join(BASE_DIR, 'apps/utils/private_2048.txt')
 ali_pub_key_path = os.path.join(BASE_DIR, 'apps/utils/alipay_key.txt')
+steam_data_action = os.path.join(BASE_DIR, "apps/utils/steam_data_action")
+steam_data_adventure = os.path.join(BASE_DIR, "apps/utils/steam_data_adventure")
+steam_data_independent = os.path.join(BASE_DIR, "apps/utils/steam_data_independent")
+steam_data_leisure = os.path.join(BASE_DIR, "apps/utils/steam_data_leisure")
+steam_data_moba = os.path.join(BASE_DIR, "apps/utils/steam_data_moba")
+steam_data_racing = os.path.join(BASE_DIR, "apps/utils/steam_data_racing")
+steam_data_role_play = os.path.join(BASE_DIR, "apps/utils/steam_data_roleplay")
+steam_data_simulation = os.path.join(BASE_DIR, "apps/utils/steam_data_simulation")
+steam_data_sports = os.path.join(BASE_DIR, "apps/utils/steam_data_sports")
+steam_data_strategy = os.path.join(BASE_DIR, "apps/utils/steam_data_strategy")
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = "smtp.gmail.com"

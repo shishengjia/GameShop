@@ -22,7 +22,7 @@
               <tbody>
               {% for game in games.object_list %}
                   <tr>
-                      <td><img style="width: 150px;height: 100px" src="{{ MEDIA_URL }}{{ game.cover }}">&nbsp;&nbsp;<a style="font-size: large;font-weight: bolder" href="{% url 'game:detail' game.id%}">{{game.name}}</a></td>
+                      <td><img style="width: 150px;height: 100px" src="{{ game.cover_url }}">&nbsp;&nbsp;<a style="font-size: large;font-weight: bolder" href="{% url 'game:detail' game.id%}">{{game.name}}</a></td>
                       <td style="vertical-align: middle !important;text-align: center;"><span style="font-weight: bolder;font-size: large;color: green">{{game.price}}&nbsp;¥</span></td>
                   </tr>
               {% endfor %}
@@ -34,30 +34,25 @@
 
           <div class="list-group">
             <a href="" class="list-group-item disabled" style="font-weight: bolder;background-color: #93c4e8">PT</a>
-            <a href="?sort=price" class="list-group-item {% ifequal sort "price" %}active{% endifequal %}">Price ↑</a>
-            <a href="?sort=price_desc" class="list-group-item {% ifequal sort "price_desc" %}active{% endifequal %}">Price ↓</a>
-            <a href="?sort=buy" class="list-group-item {% ifequal sort "buy" %}active{% endifequal %}">Top Buy</a>
+            <a href="?sort=price&tag={{ tag_id }}" class="list-group-item {% ifequal sort "price" %}active{% endifequal %}">Price ↑</a>
+            <a href="?sort=price_desc&tag={{ tag_id }}" class="list-group-item {% ifequal sort "price_desc" %}active{% endifequal %}">Price ↓</a>
           </div>
           <div class="list-group">
             <a href="#" class="list-group-item disabled" style="font-weight: bolder;background-color: #93c4e8">Category</a>
-            {% for type in all_type %}
-                <a href="?type={{ type.id }}&company_id={{ company_id }}" class="list-group-item {% ifequal type_id type.id%}active{% endifequal %}">{{ type.name }}</a>
-            {% endfor %}
-          </div>
-          <div class="list-group">
-            <a href="#" class="list-group-item disabled" style="font-weight: bolder;background-color: #93c4e8">Company</a>
-            {% for company in all_company %}
-                <a href="?type={{ type.id }}&company_id={{ company.id }}" class="list-group-item {% ifequal company_id  company.id%}active{% endifequal %}">{{ company.name }}</a>
+            {% for type in all_tags %}
+                <a href="?tag={{ type.id }}&sort={{ sort }}" class="list-group-item {% ifequal tag_id type.id%}active{% endifequal %}">{{ type.name }}<span class="badge">{{ type.get_game_num }}</span></a>
             {% endfor %}
           </div>
           <div class="list-group">
             <a href="#" class="list-group-item disabled" style="font-weight: bolder;background-color: #93c4e8">Year</a>
             {% for year in  all_year %}
-                <a href="?&year={{ year }}" class="list-group-item {% ifequal year year_%}active{% endifequal %}">{{ year }}</a>
+                <a href="?year={{ year }}" class="list-group-item {% ifequal year year_%}active{% endifequal %}">{{ year }}</a>
             {% endfor %}
           </div>
         </div>
-      <nav aria-label="Page navigation">
+
+      </div>
+     <nav aria-label="Page navigation">
       <ul class="pagination">
         <li>
             {% if games.has_previous %}
@@ -84,9 +79,6 @@
         </li>
       </ul>
     </nav>
-
-      </div>
-
 
     </div>
 

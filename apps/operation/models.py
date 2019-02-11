@@ -3,7 +3,7 @@ from datetime import datetime
 from django.db import models
 
 from users.models import UserProfile
-from game.models import Game
+from game.models import Game2
 
 
 class UserFavorite(models.Model):
@@ -18,7 +18,7 @@ class UserFavorite(models.Model):
 
 class UserGame(models.Model):
     user = models.ForeignKey(UserProfile, verbose_name="user", on_delete=models.DO_NOTHING)
-    game = models.ForeignKey(Game, verbose_name="game", on_delete=models.DO_NOTHING)
+    game = models.ForeignKey(Game2, verbose_name="game", on_delete=models.DO_NOTHING)
     add_time = models.DateTimeField(default=datetime.now, verbose_name="add_time")
 
     class Meta:
@@ -29,7 +29,7 @@ class UserGame(models.Model):
 class Order(models.Model):
 
     user = models.ForeignKey(UserProfile, verbose_name="user", on_delete=models.DO_NOTHING)
-    game = models.ForeignKey(Game, verbose_name="game", on_delete=models.DO_NOTHING)
+    game = models.ForeignKey(Game2, verbose_name="game", on_delete=models.DO_NOTHING)
     out_trade_no = models.CharField(max_length=100, unique=True, null=True, blank=True, verbose_name="merchant trade_no")
     trade_no = models.CharField(max_length=100, unique=True, null=True, blank=True, verbose_name="alipay trade_no")
     pay_status = models.CharField(default="wait_for_pay", max_length=30, verbose_name="pay_status")
