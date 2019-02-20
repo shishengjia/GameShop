@@ -19,7 +19,7 @@ from utils.steam import import_data, remove_duplicate
 
 class GameListView(View):
     def get(self, request):
-        # import_data()
+        import_data()
         all_game = Game2.objects.all().order_by("tag_id")
         all_tags = GameTag.objects.all()
         all_year = [year for year in range(2000, 2020)]
@@ -46,7 +46,6 @@ class GameListView(View):
             else:
                 all_game = all_game.order_by("-price")
                 all_game = remove_duplicate(all_game)
-
 
         # 分页
         try:
@@ -88,7 +87,7 @@ class GameDetailView(View):
         if len(comments) >= 3:
             comments = comments[:3]
 
-        return render(request, "game_detail.html",{
+        return render(request, "game_detail.html", {
             "game": game,
             "has_fav_game": has_fav_game,
             "has_buy": has_buy,
@@ -122,6 +121,3 @@ class AddFavoriteView(View, LoginRequiredMixin):
             else:
                 return HttpResponse('{"status": "fail","msg": "collect error"}',
                                     content_type="application/json")
-
-
-

@@ -2,33 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7f81532-9cea-47e4-a06d-7c66357784f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/company/migrations/0002_auto_20190208_1442.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/operation/migrations/0002_auto_20190210_2307.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/utils/steam.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/utils/async_spider/steam_async.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameShop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameShop/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/company/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/company/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/game/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/game/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/game/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/game/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/game/migrations/0002_auto_20181016_0010.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/game/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/game/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/game/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/game/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operation/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operation/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operation/migrations/0002_order.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operation/migrations/0003_auto_20181113_2058.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operation/migrations/0004_remove_order_order_sn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operation/migrations/0005_auto_20181114_1422.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operation/migrations/0006_auto_20181114_1448.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operation/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operation/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0002_auto_20181016_0010.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0003_emailverifycode.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/game_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/game_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/usercenter_fav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usercenter_fav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/usercenter_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usercenter_order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/utils/steam.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/utils/steam.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +16,10 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/GameShop$Alipay.coverage" NAME="Alipay Coverage Results" MODIFIED="1542280174711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/utils" />
     <SUITE FILE_PATH="coverage/GameShop$import_data.coverage" NAME="import data Coverage Results" MODIFIED="1549782141301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/utils" />
+    <SUITE FILE_PATH="coverage/GameShop$steam__1_.coverage" NAME="steam (1) Coverage Results" MODIFIED="1550665922859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/utils/async_spider" />
+    <SUITE FILE_PATH="coverage/GameShop$client.coverage" NAME="client Coverage Results" MODIFIED="1550582840192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/env_workspace/project/lib/python3.7/site-packages/aiohttp" />
     <SUITE FILE_PATH="coverage/GameShop$steam.coverage" NAME="steam Coverage Results" MODIFIED="1549788397298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/utils" />
+    <SUITE FILE_PATH="coverage/GameShop$steam_async.coverage" NAME="steam_async Coverage Results" MODIFIED="1550665973560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/utils/async_spider" />
     <SUITE FILE_PATH="coverage/GameShop$settings.coverage" NAME="settings Coverage Results" MODIFIED="1542269193953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GameShop" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -49,25 +29,26 @@
     <session id="366557866">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="27" />
+          <entry key="project.closed" value="29" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="15" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="4" />
-          <entry key="project.open.time.8" value="5" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.open.time.8" value="6" />
+          <entry key="project.opened" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="4229" />
           <entry key="js" value="80" />
-          <entry key="py" value="12971" />
+          <entry key="py" value="16230" />
           <entry key="py@GameShop" value="281" />
+          <entry key="txt" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -75,8 +56,8 @@
           <entry key="CommandLine" value="192" />
           <entry key="HTML" value="4229" />
           <entry key="JavaScript" value="80" />
-          <entry key="PLAIN_TEXT" value="89" />
-          <entry key="Python" value="12971" />
+          <entry key="PLAIN_TEXT" value="112" />
+          <entry key="Python" value="16230" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -89,7 +70,7 @@
           <entry key="jpg" value="6" />
           <entry key="js" value="10" />
           <entry key="png" value="3" />
-          <entry key="py" value="183" />
+          <entry key="py" value="197" />
           <entry key="steam_data" value="10" />
           <entry key="steam_data_action" value="5" />
           <entry key="steam_data_adventure" value="2" />
@@ -108,7 +89,7 @@
           <entry key="Image" value="10" />
           <entry key="JavaScript" value="10" />
           <entry key="PLAIN_TEXT" value="33" />
-          <entry key="Python" value="183" />
+          <entry key="Python" value="197" />
           <entry key="UML" value="6" />
         </counts>
       </usages-collector>
@@ -116,104 +97,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/game/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <marker date="1549864467629" expanded="true" signature="558:563" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/game/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameShop/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/game/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-              <folding>
-                <element signature="e#26#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/game/tests.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/my.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/utils/steam.py">
+        <entry file="file://$PROJECT_DIR$/apps/utils/async_spider/steam_async.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+            <state relative-caret-position="544">
+              <caret line="82" column="11" lean-forward="true" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1549864754457" expanded="true" signature="2743:4516" ph="..." />
-                <marker date="1549864754457" expanded="true" signature="10404:10580" ph="..." />
+                <marker date="1550666072856" expanded="true" signature="1784:2195" ph="..." />
+                <marker date="1550666072856" expanded="true" signature="2252:4487" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/utils/steam_data_action">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9">
-              <caret column="762255" selection-start-column="762255" selection-end-column="762255" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/game_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="944">
-              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-              <folding>
-                <element signature="e#1790#1813#0#HTML" expanded="true" />
-                <element signature="e#1838#1863#0#HTML" expanded="true" />
-                <element signature="e#2096#2121#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -238,6 +131,8 @@
       <find>Game</find>
       <find>Sniper Elite 4</find>
       <find>&quot;\u4e0d\u4f7f\u7528DX12\u5c31\u4e0d\u4f1a\u5361\u6b7b\u548c\u95ea\u9000\u4e86\u3002\u6574\u4f53\u6765\u8bb2\u8fd8\u662f\u6bd4\u8f83\u597d\u73a9\u7684\uff1b\u751f\u5b58\u6a21\u5f0f\u7684\u9650\u5236\u592a\u591a\u4e86\uff0c\u751f\u5b58\u6a21\u5f0f\u4e0d\u597d\u73a9\u3002\u6253\u6298\u7684\u65f6\u5019\u5165\u624b\u8fd8\u662f\u6bd4\u8f83\u503c\u7684\uff0c\u5efa\u8bae75OFF\u4ee5\u4e0a\u6298\u6263\u518d\u5165\u3002&quot;</find>
+      <find>logging</find>
+      <find>cookies</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -271,7 +166,6 @@
         <option value="$PROJECT_DIR$/apps/utils/send_email.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/apps/users/urls.py" />
-        <option value="$PROJECT_DIR$/apps/company/models.py" />
         <option value="$USER_HOME$/Downloads/steam.py" />
         <option value="$PROJECT_DIR$/apps/utils/import data.py" />
         <option value="$PROJECT_DIR$/GameShop/settings.py" />
@@ -280,11 +174,14 @@
         <option value="$PROJECT_DIR$/apps/users/views.py" />
         <option value="$PROJECT_DIR$/apps/operation/models.py" />
         <option value="$PROJECT_DIR$/apps/game/admin.py" />
-        <option value="$PROJECT_DIR$/apps/game/views.py" />
         <option value="$PROJECT_DIR$/templates/game_detail.html" />
         <option value="$PROJECT_DIR$/apps/game/models.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/apps/company/models.py" />
         <option value="$PROJECT_DIR$/apps/utils/steam.py" />
+        <option value="$PROJECT_DIR$/apps/game/views.py" />
+        <option value="$PROJECT_DIR$/apps/utils/async_spider/steam.py" />
+        <option value="$PROJECT_DIR$/apps/utils/async_spider/steam_async.py" />
       </list>
     </option>
   </component>
@@ -295,8 +192,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="109" />
-    <option name="y" value="23" />
+    <option name="x" value="95" />
+    <option name="y" value="31" />
     <option name="width" value="1735" />
     <option name="height" value="1032" />
   </component>
@@ -318,6 +215,12 @@
               <item name="GameShop" type="b2602c69:ProjectViewProjectNode" />
               <item name="GameShop" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GameShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GameShop" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GameShop" type="b2602c69:ProjectViewProjectNode" />
@@ -354,6 +257,13 @@
             <path>
               <item name="GameShop" type="b2602c69:ProjectViewProjectNode" />
               <item name="GameShop" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="async_spider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GameShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GameShop" type="462c0819:PsiDirectoryNode" />
               <item name="GameShop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -386,17 +296,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/static/css" />
-      <recent name="$PROJECT_DIR$/apps" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/utils/async_spider" />
       <recent name="$PROJECT_DIR$/apps/utils" />
       <recent name="$PROJECT_DIR$/apps/users" />
       <recent name="$PROJECT_DIR$/static/icon" />
       <recent name="$PROJECT_DIR$/static/css" />
-      <recent name="$PROJECT_DIR$/static/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/css" />
+      <recent name="$PROJECT_DIR$/apps" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -411,8 +321,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.GameShop">
-    <configuration name="Alipay" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.steam_async">
+    <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GameShop" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -420,12 +330,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps/utils" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/env_workspace/project/lib/python3.7/site-packages/aiohttp" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/utils/Alipay.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/env_workspace/project/lib/python3.7/site-packages/aiohttp/client.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -456,7 +366,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="steam (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GameShop" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -464,12 +374,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GameShop" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps/utils/async_spider" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GameShop/settings.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/utils/async_spider/steam.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -492,6 +402,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/utils/steam.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="steam_async" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GameShop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps/utils/async_spider" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/utils/async_spider/steam_async.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -526,17 +458,19 @@
     </configuration>
     <list>
       <item itemvalue="Django server.GameShop" />
-      <item itemvalue="Python.settings" />
-      <item itemvalue="Python.Alipay" />
       <item itemvalue="Python.steam" />
       <item itemvalue="Python.import data" />
+      <item itemvalue="Python.steam_async" />
+      <item itemvalue="Python.client" />
+      <item itemvalue="Python.steam (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.steam_async" />
+        <item itemvalue="Python.steam (1)" />
+        <item itemvalue="Python.client" />
         <item itemvalue="Python.steam" />
         <item itemvalue="Python.import data" />
-        <item itemvalue="Python.Alipay" />
-        <item itemvalue="Python.settings" />
       </list>
     </recent_temporary>
   </component>
@@ -551,19 +485,27 @@
       <option name="presentableId" value="Default" />
       <updated>1539567878008</updated>
     </task>
+    <task id="LOCAL-00001" summary="爬取steam上的游戏数据加载到网站">
+      <created>1549865030817</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1549865030817</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="109" y="23" width="1735" height="1032" extended-state="0" />
+    <frame x="95" y="31" width="1735" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49827588" visible="true" weight="0.18310691" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49827588" visible="true" weight="0.11636149" />
       <window_info id="Structure" order="1" sideWeight="0.5017241" side_tool="true" weight="0.18867925" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3287234" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49709725" visible="true" weight="0.108510636" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4992743" weight="0.35851064" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49709725" weight="0.76382977" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4992743" weight="0.47127658" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -571,7 +513,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="manage.py@GameShop" order="10" sideWeight="0.49854863" weight="0.19574468" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32978722" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.0" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50290275" side_tool="true" weight="0.32947975" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="bottom" id="File Transfer" order="14" weight="0.054255318" />
@@ -613,6 +555,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="爬取steam上的游戏数据加载到网站" />
+    <option name="LAST_COMMIT_MESSAGE" value="爬取steam上的游戏数据加载到网站" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -623,7 +569,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apps/game/views.py</url>
-          <line>101</line>
+          <line>100</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -641,6 +587,16 @@
           <line>35</line>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/utils/async_spider/steam_async.py</url>
+          <line>155</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/utils/async_spider/steam_async.py</url>
+          <line>248</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -652,156 +608,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://Python/#/Users/sigashi/PycharmProjects/GameShop/apps">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>#/Users/sigashi/PycharmProjects/GameShop/apps</OriginalElement>
-          <nodes>
-            <node x="" y="">django.db.migrations.migration.Migration</node>
-            <node x="" y="">django.contrib.auth.models.AbstractUser</node>
-            <node x="" y="">users.views.LogoutView</node>
-            <node x="" y="">game.models.GameType</node>
-            <node x="" y="">operation.admin.OrderAdmin</node>
-            <node x="" y="">game.admin.GameTypeAdmin</node>
-            <node x="" y="">object</node>
-            <node x="" y="">users.views.PayReturnView</node>
-            <node x="" y="">users.views.UserInfoView</node>
-            <node x="" y="">game.views.AddFavoriteView</node>
-            <node x="" y="">users.forms.RegisterForm</node>
-            <node x="" y="">company.admin.GameCompanyAdmin</node>
-            <node x="" y="">game.apps.GameConfig</node>
-            <node x="" y="">company.apps.CompanyConfig</node>
-            <node x="" y="">users.views.PayView2</node>
-            <node x="" y="">django.contrib.admin.options.BaseModelAdmin</node>
-            <node x="" y="">django.contrib.auth.admin.UserAdmin</node>
-            <node x="" y="">users.apps.UsersConfig</node>
-            <node x="" y="">users.admin.UserProfileAdmin</node>
-            <node x="" y="">operation.apps.OperationConfig</node>
-            <node x="" y="">django.contrib.auth.models.PermissionsMixin</node>
-            <node x="" y="">django.contrib.auth.base_user.AbstractBaseUser</node>
-            <node x="" y="">operation.models.Order</node>
-            <node x="" y="">django.db.models.base.Model</node>
-            <node x="" y="">operation.models.UserGame</node>
-            <node x="" y="">operation.models.UserFavorite</node>
-            <node x="" y="">company.models.GameCompany</node>
-            <node x="" y="">users.forms.LoginForm</node>
-            <node x="" y="">game.models.Game</node>
-            <node x="" y="">django.contrib.admin.options.ModelAdmin</node>
-            <node x="" y="">django.forms.widgets.MediaDefiningClass</node>
-            <node x="" y="">users.views.ModifyPassword</node>
-            <node x="" y="">users.views.UserFavView</node>
-            <node x="" y="">django.contrib.auth.backends.ModelBackend</node>
-            <node x="" y="">utils.LoginJudge.LoginRequiredMixin</node>
-            <node x="" y="">game.views.GameDetailView</node>
-            <node x="" y="">django.forms.forms.BaseForm</node>
-            <node x="" y="">django.views.generic.base.View</node>
-            <node x="" y="">users.models.EmailVerifyCode</node>
-            <node x="" y="">game.admin.GameAdmin</node>
-            <node x="" y="">django.apps.config.AppConfig</node>
-            <node x="" y="">django.forms.forms.Form</node>
-            <node x="" y="">users.views.OrderView</node>
-            <node x="" y="">users.admin.GlobalSetting</node>
-            <node x="" y="">users.views.ForgetPassword</node>
-            <node x="" y="">users.models.UserProfile</node>
-            <node x="" y="">users.views.CustomBackend</node>
-            <node x="" y="">game.views.GameListView</node>
-            <node x="" y="">users.views.LoginView</node>
-            <node x="" y="">django.db.models.base.ModelBase</node>
-            <node x="" y="">users.views.RegisterView</node>
-            <node x="" y="">users.views.PayView</node>
-            <node x="" y="">utils.Alipay.AliPay</node>
-            <node x="" y="">django.forms.forms.DeclarativeFieldsMetaclass</node>
-            <node x="" y="">users.views.ResetView</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.8757396443579456" x="1641.0" y="46.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DjangoModelDependency/#GameShop">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DjangoModelDependency</ID>
-          <OriginalElement>#GameShop</OriginalElement>
-          <nodes>
-            <node x="" y="">operation.models.Order</node>
-            <node x="" y="">django.contrib.auth.models.Group</node>
-            <node x="" y="">game.models.GameType</node>
-            <node x="" y="">operation.models.UserFavorite</node>
-            <node x="" y="">django.contrib.contenttypes.models.ContentType</node>
-            <node x="" y="">django.contrib.auth.models.Permission</node>
-            <node x="" y="">game.models.Game</node>
-            <node x="" y="">company.models.GameCompany</node>
-            <node x="" y="">users.models.UserProfile</node>
-            <node x="" y="">operation.models.UserGame</node>
-            <node x="" y="">users.models.EmailVerifyCode</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="399.0" y="213.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/test.jpg" />
-    <entry file="file://$PROJECT_DIR$/apps/utils/send_email.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#26#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pay_success.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/password_reset.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/utils/Alipay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-          <folding>
-            <marker date="1542279905676" expanded="true" signature="1774:1960" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/remote_sources/-918040640/1892266705/django/utils/autoreload.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="224" selection-start-line="224" selection-end-line="224" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="71" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -819,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/company/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameShop/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -840,9 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -881,13 +677,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/utils/steam_data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57783">
-          <caret column="5163" selection-start-column="5163" selection-end-column="5163" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/utils/steam_data" />
     <entry file="file://$PROJECT_DIR$/apps/utils/steam_data_leisure">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6737">
@@ -908,9 +698,7 @@
     <entry file="file://$PROJECT_DIR$/apps/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/utils/import data.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/utils/import data.py" />
     <entry file="file://$PROJECT_DIR$/apps/utils/steam_data_adventure">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -977,9 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#26#65#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1016,25 +801,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/my.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/game/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/game/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-705" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/utils/steam_data_action">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret column="762255" selection-start-column="762255" selection-end-column="762255" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/game/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <marker date="1549864467629" expanded="true" signature="558:563" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/game/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/company/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+          <folding>
+            <element signature="e#26#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1045,26 +847,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/utils/steam_data_action">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret column="762255" selection-start-column="762255" selection-end-column="762255" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/game/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        <state relative-caret-position="90">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding>
             <element signature="e#26#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/game/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/company/views.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/game_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
+        <state relative-caret-position="990">
           <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
           <folding>
             <element signature="e#1790#1813#0#HTML" expanded="true" />
@@ -1077,28 +885,86 @@
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
-          <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/game/models.py">
+    <entry file="file://$USER_HOME$/env_workspace/project/lib/python3.7/site-packages/aiohttp/client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <marker date="1549864467629" expanded="true" signature="558:563" ph="..." />
-          </folding>
+        <state relative-caret-position="-58">
+          <caret line="789" lean-forward="true" selection-start-line="789" selection-end-line="789" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/utils/steam.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        <state relative-caret-position="458">
+          <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1549864754457" expanded="true" signature="2743:4516" ph="..." />
-            <marker date="1549864754457" expanded="true" signature="10404:10580" ph="..." />
+            <marker date="1549892670740" expanded="true" signature="2648:4423" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tornado_overview/httpclient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tornado_overview/tornado_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="528" selection-start-line="528" selection-end-line="528" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/env_workspace/project/lib/python3.7/site-packages/aiohttp/client_reqrep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="688" column="37" selection-start-line="688" selection-start-column="37" selection-end-line="688" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/cookies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="376" selection-start-line="376" selection-end-line="376" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/utils/async_spider/steam.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="154" column="24" lean-forward="true" selection-start-line="154" selection-start-column="24" selection-end-line="154" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/utils/async_spider/steam_async.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="82" column="11" lean-forward="true" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1550666072856" expanded="true" signature="1784:2195" ph="..." />
+            <marker date="1550666072856" expanded="true" signature="2252:4487" ph="..." />
           </folding>
         </state>
       </provider>

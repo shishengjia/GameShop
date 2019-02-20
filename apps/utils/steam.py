@@ -1,9 +1,6 @@
 from bs4 import BeautifulSoup as bs
 import requests
 import json
-from selenium import webdriver
-from selenium.webdriver.support.select import Select
-import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
@@ -21,7 +18,7 @@ class Steam:
                         "?query=&start={}&count=15&cc=CN&l=schinese&v=4&tag=%E5%A4%A7%E5%9E%8B%E5%A4%9A%E4%BA%BA%E5%9C%A8%E7%BA%BF"
         self.url_simulation = "https://store.steampowered.com/contenthub/querypaginated/tags/TopSellers/render/" \
                               "?query=&start={}&count=15&cc=CN&l=schinese&v=4&tag=%E6%A8%A1%E6%8B%9F"
-        self.url_independent= "https://store.steampowered.com/contenthub/querypaginated/tags/TopSellers/" \
+        self.url_independent = "https://store.steampowered.com/contenthub/querypaginated/tags/TopSellers/" \
                                "render/?query=&start={}&count=15&cc=CN&l=schinese&v=4&tag=%E7%8B%AC%E7%AB%8B"
         self.url_speed = "https://store.steampowered.com/contenthub/querypaginated/tags/TopSellers/render/" \
                          "?query=&start={}&count=15&cc=CN&l=schinese&v=4&tag=%E7%AB%9E%E9%80%9F"
@@ -37,7 +34,7 @@ class Steam:
         self.game_package = 0
 
     def download_game(self, url):
-        game_list_urls = [url.format(i*15) for i in range(self.page_num)]
+        game_list_urls = [url.format(i * 15) for i in range(self.page_num)]
         all_tasks = [self.executor.submit(self.get_game_url, game_list_url) for game_list_url in game_list_urls]
         for future in as_completed(all_tasks):
             _data = future.result()
@@ -85,8 +82,9 @@ class Steam:
             soup = bs(results, "lxml")
         try:
 
-            #game shot
-            imgs_1080 = [item.get("href").split("url=")[1] for item in soup.select(".highlight_player_item.highlight_screenshot a")]
+            # game shot
+            imgs_1080 = [item.get("href").split("url=")[1] for item in
+                         soup.select(".highlight_player_item.highlight_screenshot a")]
             if len(imgs_1080) >= 3:
                 imgs_1080 = imgs_1080[:3]
 
@@ -174,14 +172,14 @@ def import_data():
                  steam_data_moba, steam_data_role_play, steam_data_simulation, steam_data_racing,
                  steam_data_sports, steam_data_strategy]
     for index, file in enumerate(game_data, start=1):
-        print(index)
         game_list = []
         with open(file, "r") as f:
             games = json.load(f)["games"]
             for item in games:
                 if len(item["imgs_1080"]) >= 3 and item["date"] != "16" and item["date"] != "04/04/2019":
                     try:
-                        game = Game2(name=item["name"], game_detail_url=item["game_detail_url"], cover_url=item["cover_url"],
+                        game = Game2(name=item["name"], game_detail_url=item["game_detail_url"],
+                                     cover_url=item["cover_url"],
                                      price=item["price"], os=item["system"], desc=item["desc"],
                                      release_time=datetime.strptime(item["date"], "%Y"),
                                      game_scree_shot_1=item["imgs_1080"][0],
@@ -191,13 +189,12 @@ def import_data():
                                      )
                         game_list.append(game)
                     except:
-                        pprint.pprint(item)
+                        pass
         Game2.objects.bulk_create(remove_duplicate(game_list))
 
     comment_list = []
     count = 0
     for index, file in enumerate(game_data, start=1):
-        print(index)
         with open(file, "r") as f:
             games = json.load(f)["games"]
             for item in games:
@@ -207,10 +204,10 @@ def import_data():
                     try:
                         games = Game2.objects.filter(name=item["name"])
                         for game in games:
-                            comment_list.extend([Comment(game_id=game.id, comment=comment) for comment in item["comments"]])
+                            comment_list.extend(
+                                [Comment(game_id=game.id, comment=comment) for comment in item["comments"]])
                     except Exception as e:
-                        print(e)
-                        pprint.pprint(item)
+                        pass
 
     Comment.objects.bulk_create(comment_list)
 
@@ -224,15 +221,3 @@ def remove_duplicate(game_list):
             new_game_list.append(item)
 
     return new_game_list
-
-
-
-
-
-
-
-
-
-
-
-
