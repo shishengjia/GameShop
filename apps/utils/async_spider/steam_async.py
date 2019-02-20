@@ -21,19 +21,6 @@ category_info = {
     "roleplay": ["%E8%A7%92%E8%89%B2%E6%89%AE%E6%BC%94", 30]
 }
 
-# category_info = {
-#     "leisure": ["%E4%BC%91%E9%97%B2", 1],
-#     "sports": ["%E4%BD%93%E8%82%B2", 1],
-#     "adventure": ["%E5%86%92%E9%99%A9",1],
-#     "action": ["%E5%8A%A8%E4%BD%9C", 1],
-#     "moba": ["%E5%A4%A7%E5%9E%8B%E5%A4%9A%E4%BA%BA%E5%9C%A8%E7%BA%BF", 1],
-#     "simulation": ["%E6%A8%A1%E6%8B%9F", 2],
-#     "independent": ["%E7%8B%AC%E7%AB%8B", 1],
-#     "speed": ["%E7%AB%9E%E9%80%9F", 1],
-#     "strategy": ["%E7%AD%96%E7%95%A5", 1],
-#     "roleplay": ["%E8%A7%92%E8%89%B2%E6%89%AE%E6%BC%94", 1]
-# }
-
 
 class Steam:
     def __init__(self, max_concurrency=50):
